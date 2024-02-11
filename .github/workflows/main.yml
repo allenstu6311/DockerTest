@@ -1,0 +1,26 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name : Test
+      run: npm run test
+
+    - name: Build Docker image
+      run: docker build -t myapp:${{ github.sha }} .
+
+
+
+
+    # - name: Push Docker image to Docker Hub
+    #   run: |
+    #     echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+    #     docker push myapp:${{ github.sha }}
