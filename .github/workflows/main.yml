@@ -12,8 +12,15 @@ jobs:
     - name: Check out the repo
       uses: actions/checkout@v2
 
+
+    - name: Install dependencies
+      run: npm install
+
     - name : Test
       run: npm run test
+
+    - name: Build the project
+      run: npm run build
 
     - name: Build Docker image
       run: docker build -t myapp:${{ github.sha }} .
