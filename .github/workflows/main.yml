@@ -36,7 +36,7 @@ jobs:
 
 
     - name: Build and push
-      run: docker push stuallen6311/docker_test::${{ github.sha }}
+      run: docker push stuallen6311/docker_test:${{ github.sha }}
 
 
 
