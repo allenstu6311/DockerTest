@@ -6,8 +6,8 @@ body {
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  background-color: red;
 }
+
 .content {
   min-height: 80vh;
   display: flex;
