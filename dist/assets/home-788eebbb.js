@@ -1,0 +1,1 @@
+import{a3 as e,d as r,e as c}from"./index-d60becef.js";const o={};function s(a,n){return r(),c("div")}const _=e(o,[["render",s],["__file","C:/Users/user/OneDrive/桌面/測試用專案/my-vue-app/src/BackendLayout/home.vue"]]);export{_ as default};
