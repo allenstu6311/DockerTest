@@ -24,4 +24,20 @@ export default defineConfig({
       { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
     ]
   },
+  test: {
+    // server: {
+    //   deps: {
+    //     inline: [
+    //       "allendragtable"
+    //     ]
+    //   }
+    // },
+  
+    // enable jest-like global test APIs
+    globals: true,
+    // simulate DOM with happy-dom
+    // (requires installing happy-dom as a peer dependency)
+    environment: 'happy-dom',
+    
+  }
 })

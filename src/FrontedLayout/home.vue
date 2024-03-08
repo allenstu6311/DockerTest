@@ -6,7 +6,7 @@
       <tbody></tbody>
     </table>
   </div>
-
+  {{ msg }}
 
   <v-btn color="primary"> 1223</v-btn>
   
@@ -14,18 +14,22 @@
 <script setup>
 import { getProductInfo } from "@/assets/js/api/ajax.js";
 // import Header from "../components/Backend/Header.vue";
-import DragTable from "allendragtable"
+// import DragTable from "allendragtable"
 import utils from "../assets/js/utils"
+const msg = ref("hello")
+
+function test(a,b){
+  return a+b
+}
 
 
+// onMounted(() => {
+//   callAPI();
+//   new DragTable("table", {
+//     tableData: tableData,
+//   })
 
-onMounted(() => {
-  callAPI();
-  new DragTable("table", {
-    tableData: tableData,
-  })
-
-});
+// });
 
 const tableData = [
   {
