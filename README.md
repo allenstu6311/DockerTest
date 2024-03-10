@@ -1,7 +1,7 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# Jest採坑紀錄
+1.Jest底層是使用commonJS來運行，檔名需設定成.cjs不然會無法運行
+2.必須使用不然會找不到import的東西   
+ testEnvironmentOptions: {
+        customExportConditions: ["node", "node-addons"],
+}
+告訴jest使用babel的模組解析器，jest沒辦法解析ES語法
