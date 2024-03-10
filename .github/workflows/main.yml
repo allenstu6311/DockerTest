@@ -17,7 +17,7 @@ jobs:
       run: npm install
 
     - name : Test
-      run: npm run vitetest
+      run: npm run test
 
     - name: Build the project
       run: npm run build
