@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "test": "jest",
     "vitetest": "vitest",
-    "i18n:check": "i18n-check -l ./locale -s zh_CN -e ts --no-watch -f"
+    "i18n:check": "i18n-check -l ./locale -s zh_CN -e ts --no-watch"
   },
   "dependencies": {
     "@vue/vue3-jest": "^29.2.6",
